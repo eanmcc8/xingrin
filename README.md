@@ -1,11 +1,11 @@
 <h1 align="center">XingRin - 星环</h1>
 
 <p align="center">
-  <b>攻击面管理平台 (ASM) | 自动化资产发现与漏洞扫描系统</b>
+  <b>开源攻击面管理平台 (ASM) | 面向授权安全测试与防御研究的资产发现与安全自动化系统</b>
 </p>
 
 <p align="center">
-  <b>重构进行中</b>：目前正在使用 Go 语言重写后端，全新的前端 UI 与后端架构设计，目前进度7/10，有优化建议，bug等可以继续提issue，都会迁移到新版本。关注公众号入群到时候发内部测试，以下是暂定的ui，群加不了可以加我微信拉你
+  <b>持续维护中</b>：项目正在进行新一代架构重构，后端逐步迁移到 Go，前端与工作流系统也在同步升级。当前版本会继续维护，Issue、建议和 PR 都欢迎提交，成熟能力会逐步迁移到新版本。
 </p>
 
 <p align="center">
@@ -17,7 +17,7 @@
   <a href="https://github.com/yyhuni/xingrin/stargazers"><img src="https://img.shields.io/github/stars/yyhuni/xingrin?style=flat-square&logo=github" alt="GitHub stars"></a>
   <a href="https://github.com/yyhuni/xingrin/network/members"><img src="https://img.shields.io/github/forks/yyhuni/xingrin?style=flat-square&logo=github" alt="GitHub forks"></a>
   <a href="https://github.com/yyhuni/xingrin/issues"><img src="https://img.shields.io/github/issues/yyhuni/xingrin?style=flat-square&logo=github" alt="GitHub issues"></a>
-  <a href="https://github.com/yyhuni/xingrin/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-PolyForm%20NC-blue?style=flat-square" alt="License"></a>
+  <a href="https://github.com/yyhuni/xingrin/blob/main/LICENSE"><img src="https://img.shields.io/github/license/yyhuni/xingrin?style=flat-square" alt="License"></a>
 </p>
 
 <p align="center">
@@ -29,7 +29,7 @@
 </p>
 
 <p align="center">
-  <sub>关键词: ASM | 攻击面管理 | 漏洞扫描 | 资产发现 | 资产搜索 | Bug Bounty | 渗透测试 | Nuclei | 子域名枚举 | EASM</sub>
+  <sub>关键词: Open Source | ASM | 攻击面管理 | 授权安全测试 | 防御研究 | 资产发现 | 资产搜索 | 安全自动化 | Nuclei | 子域名枚举 | EASM</sub>
 </p>
 
 ---
@@ -38,6 +38,8 @@
  **[https://xingrin.vercel.app/](https://xingrin.vercel.app/)**
 
 > 仅用于 UI 展示，未接入后端数据库
+
+> XingRin 聚焦 **自有资产管理、授权安全测试与防御研究** 场景，帮助安全团队对互联网暴露面进行持续发现、监控与分析。
 
 ---
 
@@ -60,6 +62,9 @@
 - [Nuclei 模板架构](./docs/nuclei-template-architecture.md) - 模板仓库的存储与同步
 - [字典文件架构](./docs/wordlist-architecture.md) - 字典文件的存储与同步
 - [扫描流程架构](./docs/scan-flow-architecture.md) - 完整扫描流程与工具编排
+- [贡献指南](./CONTRIBUTING.md) - Issue、Pull Request 与贡献约定
+- [安全策略](./SECURITY.md) - 漏洞报告与安全响应流程
+- [行为准则](./CODE_OF_CONDUCT.md) - 社区协作行为规范
 
 
 ---
@@ -269,7 +274,9 @@ sudo ./uninstall.sh
 
 ## 反馈与贡献
 
-- **发现 Bug，有新想法，比如UI设计，功能设计等** 欢迎点击右边链接进行提交建议 [Issue](https://github.com/yyhuni/xingrin/issues) 或者公众号私信
+- **发现 Bug、想法或改进建议**：欢迎提交 [Issue](https://github.com/yyhuni/xingrin/issues)
+- **想直接参与开发**：欢迎发起 Pull Request，提交前建议先阅读 [贡献指南](./CONTRIBUTING.md)
+- **安全问题反馈**：请优先阅读 [安全策略](./SECURITY.md)，避免公开披露未修复漏洞
 
 ## 联系
 - 微信公众号: **塔罗安全学苑**
@@ -299,15 +306,15 @@ sudo ./uninstall.sh
 
 
 
-## 免责声明
+## 安全与合规说明
 
 **重要：请在使用前仔细阅读**
 
-1. 本工具仅供**授权的安全测试**和**安全研究**使用
-2. 使用者必须确保已获得目标系统的**合法授权**
-3. **严禁**将本工具用于未经授权的渗透测试或攻击行为
-4. 未经授权扫描他人系统属于**违法行为**，可能面临法律责任
-5. 开发者**不对任何滥用行为负责**
+1. 本项目面向**授权安全测试**、**防御研究**与**自有资产攻击面管理**场景
+2. 使用者必须确保已获得目标系统、数据和环境的**明确合法授权**
+3. 请勿将本项目用于任何未经授权的扫描、入侵、破坏或其他违法行为
+4. 使用者应自行确认其行为符合所在地区法律法规、合同义务和组织政策
+5. 项目维护者**不对滥用行为负责**
 
 使用本工具即表示您同意：
 - 仅在合法授权范围内使用
@@ -322,21 +329,8 @@ sudo ./uninstall.sh
 
 ## 许可证
 
-本项目采用 [GNU General Public License v3.0](LICENSE) 许可证。
+本项目采用 [MIT License](LICENSE)。
 
-### 允许的用途
+MIT 许可证允许商业和非商业使用、修改、分发与私有部署，但要求保留原始版权和许可证声明。
 
-- 个人学习和研究
-- 商业和非商业使用
-- 修改和分发
-- 专利使用
-- 私人使用
-
-### 义务和限制
-
-- **开源义务**：分发时必须提供源代码
-- **相同许可**：衍生作品必须使用相同许可证
-- **版权声明**：必须保留原始版权和许可证声明
-- **责任免除**：不提供任何担保
-- 未经授权的渗透测试
-- 任何违法行为
+请注意：开源许可证授予的是代码使用、修改和分发权限，并不构成对任何未经授权安全测试或违法行为的许可。使用者仍需自行确保其用途合法、合规且已获得明确授权。
