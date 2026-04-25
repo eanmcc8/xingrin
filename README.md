@@ -5,13 +5,9 @@
 </p>
 
 <p align="center">
-  <b>持续维护中</b>：项目正在进行新一代架构重构，后端逐步迁移到 Go，前端与工作流系统也在同步升级。当前版本会继续维护，Issue、建议和 PR 都欢迎提交，成熟能力会逐步迁移到新版本。
+  <b>持续维护中</b>：由于现在架构，代码对于ai开发来说，演化进度难度很高，代码原生分布式能力弱，为了适应项目的长期发展，正在进行新一代架构重构，后端采用 Go 语言为核心，其强大的分布式能力是目前最优解，当前版本暂停维护，Issue、建议和 PR 都欢迎提交，旧项目的所有建议，都会逐步迁移到新版本。
 </p>
 
-<p align="center">
-  <img src="docs/screenshots/yuehu1.png" alt="仪表盘" width="48%">
-  <img src="docs/screenshots/yuehu2.png" alt="扫描历史" width="48%">
-</p>
 
 <p align="center">
   <a href="https://github.com/yyhuni/xingrin/stargazers"><img src="https://img.shields.io/github/stars/yyhuni/xingrin?style=flat-square&logo=github" alt="GitHub stars"></a>
